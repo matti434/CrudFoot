@@ -3,20 +3,13 @@ import { LoginForm } from "./LoginForm";
 import { use, useState } from "react";
 
 const Login = () => {
-
-  const [valores,setValores]= useState([
-    
-  ])
-
   return (
     <Modal show={true} onHide={handleClose}>
       <Modal.Header closeButton>
         <Modal.Title>Iniciar Sesíon</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <form action="">
-          <LoginForm value={valores} onChange={setValores} />
-        </form>
+        <LoginForm onChange={setValores} loading={loading} />
       </Modal.Body>
 
       <Modal.Footer>
