@@ -12,6 +12,7 @@ const Menu = () => {
           <Nav className="ms-auto">
             <NavLink to={'/'} className={"nav-link"}>HOME</NavLink>
             <NavLink to={'/login'} className={'nav-link'}>LOGIN</NavLink>
+            <NavLink to={'/login'} className={'nav-link'}>REGISTER</NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>
