@@ -3,7 +3,7 @@ import './App.css'
 import Menu from './Components/shared/Menu'
 import Footer from './Components/shared/Footer'
 import Home from './Components/pages/Home'
-import LoginForm from './Components/pages/Login'
+import Login from './Components/pages/Login'
 
 function App() {
 

@@ -1,23 +1,18 @@
-import React, { useState } from "react";
-
-const LoginForm = ({ valores, onChange,loading }) => {
+const LoginForm = ({ valores, onChange,loading,onSubmit }) => {
   
-  const [formData,setFormData]=useState({
-    usuario:"",
-    contrasena:""
-  })
 
   const manejoCambios = (e) =>{
       const {name,value} = e.target;
-      setFormData({
-        ...formData,
+      
+      onChange({
+        ...valores,
         [name]:value
       });
   };
 
   const manejoSubmit = (e) =>{
-    e.proventDefault();
-    onSubmit(formData);
+    e.preventDefault();
+    onSubmit(valores);
   };
   
     return (
@@ -29,7 +24,7 @@ const LoginForm = ({ valores, onChange,loading }) => {
       className="form-control"  
       id="usuario"
       name="usuario"
-      value={formData.usuario} 
+      value={valores.usuario} 
       onChange={manejoCambios}
       placeholder="Ejemplo@gmail.com"
       required 
@@ -41,9 +36,9 @@ const LoginForm = ({ valores, onChange,loading }) => {
       <input 
       type="password"
       className="form-control"
-      id="password"
-      name="password"
-      value={formData.contrasena}
+      id="contraseña"
+      name="contraseña"
+      value={valores.contrasena}
       onChange={manejoCambios}
       placeholder="Contraseña"
       required 
