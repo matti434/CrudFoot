@@ -3,6 +3,7 @@ import './App.css'
 import Menu from './Components/shared/Menu'
 import Footer from './Components/shared/Footer'
 import Home from './Components/pages/Home'
+import LoginForm from './Components/pages/Login'
 
 function App() {
 
@@ -14,7 +15,7 @@ function App() {
     <main>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/' element={<Login/>}/>
+        <Route path='/login' element={<Login />}/>
       </Routes>
     </main>
     <Footer></Footer>

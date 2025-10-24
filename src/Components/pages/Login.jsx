@@ -1,8 +1,15 @@
-import { Modal } from "react-bootstrap";
-import { LoginForm } from "./LoginForm";
+import { Modal, Button } from "react-bootstrap";
+import { LoginForm } from "/LoginForm";
 import { use, useState } from "react";
 
 const Login = () => {
+
+  const [valores,setValores] = useState("");
+
+ const manejoCerrar = () => {
+   
+ }
+
   return (
     <Modal show={true} onHide={handleClose}>
       <Modal.Header closeButton>
@@ -13,9 +20,11 @@ const Login = () => {
       </Modal.Body>
 
       <Modal.Footer>
-        <Button variant="secondary">Close</Button>
+        <Button variant="secondary" onClick={manejoCerrar}>Close</Button>
         <Button variant="primary">Save changes</Button>
       </Modal.Footer>
     </Modal>
   );
 };
+
+export default Login;
