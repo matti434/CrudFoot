@@ -47,3 +47,89 @@ Desde Menu, navegás hacia /login ➜ se abre el modal.
 
 Desde Login, navegás de vuelta a / ➜ se cierra el modal.
 
+### AS y TO
+ ``` jsx
+<Navbar.Brand as={Link} to={"/"}>
+```
+
+---
+---
+---
+
+Que hace as ?
+ - as es un prop de React Boostrap que permite cambiar el elemento HTML o componente que se renderiza.
+ - Por defecto, navbar.Bramd renderiza un "a" tag con as={Link} le decimos: "En lugar de usar un "a", usamos el componente Link de React Router"
+
+ Que hace to ?
+ - to es una prop del componente link de React Router
+ - Es el equivalente a href en un anchor tag normal
+ - Especifica a que ruta debe navegar cuando se hace click
+
+ ¿Cómo funciona?
+``` jsx
+// con HTML
+<a href="/" className="navbar-brand fs-2">Crud Food</a>
+
+// Con React Bootstrap + React Router
+<Navbar.Brand as={Link} to={"/"} className="fs-2">
+  Crud Food
+</Navbar.Brand>
+
+
+
+Otras formas similares:
+// Opción 1: Con styled components
+<Navbar.Brand as={CustomLink} to="/">
+
+// Opción 2: Con componente personalizado
+<Navbar.Brand as={MyCustomComponent}>
+
+// Opción 3: Directamente con Link (sin Navbar.Brand)
+<Link to="/" className="navbar-brand fs-2">Crud Food</Link>
+```
+
+#### Por que aqui lo hago distinto ?
+``` jsx
+ <NavLink
+ onClick={abrirLogin}
+ className={"nav-link"}
+ style={{ cursor: "pointer" }}
+>
+  LOGIN
+</NavLink>{" "}
+```
+
+- to: navega directamente a /login y renderiza lo que haya en esa ruta
+- onClick + navigate(): Nos da control para:
+    - Abrir modales
+    - Hacer validaciones antes de navegar
+    - Ejecutar logica adicional
+    - Mantener el estado actual
+
+#### Declaracion Declarativa y Programatica
+
+Aqui mas que nada se diferencia entre estos dos conceptos
+
+Declarativa: Dime como hacerlo
+``` jsx
+<Link to="/login">Login</Link>
+// "Cuando hagan click, ve a /login"
+```
+
+Programática (Dime CÓMO hacerlo):
+
+``` jsx
+const handleLogin = () => {
+  // Validar usuario
+  if (usuarioLogueado) {
+    navigate('/dashboard');
+  } else {
+    navigate('/login');
+  }
+};
+
+<button onClick={handleLogin}>Login</button>
+// "Cuando hagan click, ejecuta esta lógica y decide a dónde ir"
+```
+
+En un resumen simple, con la programatica puedo controlar exactamente que pasa al hacer click en "LOGIN".
