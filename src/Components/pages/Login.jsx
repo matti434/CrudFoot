@@ -33,6 +33,7 @@ const Login = () => {
       manejoCerrar();
     }, 2000);
   };
+  
   return (
     <Modal show={verModal} onHide={manejoCerrar}>
       <Modal.Header closeButton>
