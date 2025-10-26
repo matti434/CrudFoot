@@ -141,4 +141,11 @@ Estado Local (en cada componente):
 
 ✅ Menos prop drilling: No pasar props através de muchos componentes
 
-✅ Mejor performance: Solo se re-renderiza el componente afectado
+✅ Mejor performance: Solo se re-renderiza el componente afectado0
+
+Estado Global (en el padre):
+✅ Compartido: Múltiples componentes acceden a los mismos datos
+
+✅ Consistencia: Todos ven la misma información
+
+✅ Sincronización: Cambios se reflejan en todos lados
