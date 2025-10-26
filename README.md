@@ -133,3 +133,12 @@ const handleLogin = () => {
 ```
 
 En un resumen simple, con la programatica puedo controlar exactamente que pasa al hacer click en "LOGIN".
+
+
+ Ventajas de estado local vs global:
+Estado Local (en cada componente):
+✅ Más simple: Fácil de entender y mantener
+
+✅ Menos prop drilling: No pasar props através de muchos componentes
+
+✅ Mejor performance: Solo se re-renderiza el componente afectado
