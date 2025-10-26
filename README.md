@@ -137,15 +137,15 @@ En un resumen simple, con la programatica puedo controlar exactamente que pasa a
 
  Ventajas de estado local vs global:
 Estado Local (en cada componente):
-✅ Más simple: Fácil de entender y mantener
+ Más simple: Fácil de entender y mantener
 
-✅ Menos prop drilling: No pasar props através de muchos componentes
+ Menos prop drilling: No pasar props através de muchos componentes
 
-✅ Mejor performance: Solo se re-renderiza el componente afectado0
+ Mejor performance: Solo se re-renderiza el componente afectado0
 
 Estado Global (en el padre):
-✅ Compartido: Múltiples componentes acceden a los mismos datos
+ Compartido: Múltiples componentes acceden a los mismos datos
 
-✅ Consistencia: Todos ven la misma información
+ Consistencia: Todos ven la misma información
 
-✅ Sincronización: Cambios se reflejan en todos lados
+ Sincronización: Cambios se reflejan en todos lados
